@@ -4,8 +4,6 @@ let legend_svg = d3.select("#legend_container")
 d3.xml("helper.svg")
 .then(data => {
   map_svg.node().append(data.documentElement)
-  
-  
 });
 
 function resetAll(data) {
@@ -50,6 +48,7 @@ d3.csv("city.csv").then(function(data) {
             "width":200,
             "height":600,
         });
+        
         styleImportedSVG(data)
   
         addNames(data);
